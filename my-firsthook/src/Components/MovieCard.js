@@ -1,8 +1,9 @@
 import React from 'react';
-import Rate from './Rate'
+import Rate from './Rate';
+import {Link} from 'react-router-dom'
 
 const MovieCard = ({
-  movie: { name, date, rating, image, trailer, description },
+  movie: { id,name, date, rating, image, trailer, description },
 }) => {
   return (
     <div className="card">
@@ -22,10 +23,11 @@ const MovieCard = ({
           <Rate rating={rating}/>
         </div>
         <div className="card_right__review">
-          <p>{description}</p>
+         <Link to='/'><p>{description}</p></Link> 
         </div>
         <div className="card_right__button">
-          <a href={trailer}>WATCH TRAILER</a>
+          <Link to={`${id}`}>WATCH TRAILE </Link>
+          
         </div>
       </div>
     </div>
