@@ -23,7 +23,7 @@ function App() {
     <MovieList moviesList={moviesList} searchByName={searchByName}  serchByRate={serchByRate} /> 
     <AddMovies addMovies={addMovies} /> 
     </Route>
-    <Route path='/:movieId' component={Details} />
+    <Route path='/movie/:name' component={Details} />
     </Router>
     </div>
   );

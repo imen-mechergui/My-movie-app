@@ -7,6 +7,7 @@ const MovieCard = ({
 }) => {
   return (
     <div className="card">
+       <Link to = {`/movie/${name}`} >
       <div className="card_left">
         <img src={image} alt="poster" />
       </div>
@@ -15,7 +16,6 @@ const MovieCard = ({
         <div className="card_right__details">
           <ul>
             <li>{date}</li>
-          
           </ul>
         </div>
         <div className="card_right__rating">
@@ -23,13 +23,13 @@ const MovieCard = ({
           <Rate rating={rating}/>
         </div>
         <div className="card_right__review">
-         <Link to='/'><p>{description}</p></Link> 
+          {description}
         </div>
         <div className="card_right__button">
-          <Link to={`${id}`}>WATCH TRAILE </Link>
-          
+        <a href="https://www.youtube.com/watch?v=EOxxKAN-M_Y& ab_channel=At0mium">WATCH TRAILER</a>
         </div>
-      </div>
+        </div>
+      </Link>
     </div>
   );
 };

@@ -15,6 +15,7 @@ body {
   box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.2);
   transform: scale(0.95);
   transition: all 0.5s;
+  align-items: center;
 }
 .card:hover {
   transform: scale(1);
@@ -143,12 +144,14 @@ h1 {
 
 
 .Add-btn {
-  background-color: rgb(253, 5, 5);
+  background-color: rgb(6, 62, 94);
   border: transparent;
   color: white;
-  font-size: 100px;
+  font-size: 50px;
   padding: 8px 20px;
-  margin: 30px 0;
+  margin: 0px 0;
+  align-items: center;
+
 }
 /* add movie modal */
 .addMovie-h1 {
@@ -200,7 +203,7 @@ form textarea:focus {
 }
 .Modal-btn {
   border-radius: 5px;
-  background-color: #ff1100;
+  background-color: #afdae2;
   border: transparent;
   color: rgb(26, 25, 25);
   padding: 8px 20px;

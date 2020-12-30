@@ -1,18 +1,30 @@
 import React from 'react'
-import MovieData from './MoviesData'
-function Details ({match}) {
-    console.log(match)
-    const movie=MovieData.find(el=>el.id=match.params.movieId)
-    console.log(movie)
-    return (
-        <div>
-            
-            <p> {movie.trailer} </p> 
-            <p> {movie.description}</p>
+import MoviesData from './MoviesData'
 
-           
+import {Link} from 'react-router-dom'
+
+const Details=(props)=>{
+    const x =MoviesData
+    return(
+        <div>
+            {console.log(props)}
+            <Link to='/'>
+            <button>Home</button>
+            </Link>
+            <h1>
+                {x.find((el)=> props.match.params.name===el.name).name}
+                  
+            </h1>
+            
+            <br />
+            <p>{x.find((el)=> props.match.params.name===el.name).trailer}</p>
+            
+            <p>{x.find((el)=> props.match.params.name===el.name).description}</p>
         </div>
     )
 }
+export default Details
 
-export default Details 
+
+
+
